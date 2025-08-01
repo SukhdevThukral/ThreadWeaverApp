@@ -15,8 +15,6 @@ def get_resource_path(relative_path):
 
     return os.path.join(base_path, relative_path)
 
-
-
 root = tk.Tk()
 root.title("ThreadWeaver - Smart Task Manager")
 root.geometry("600x400")
