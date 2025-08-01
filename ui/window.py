@@ -70,7 +70,6 @@ battery_label_var.set("Battery: ...")
 battery_label = tk.Label(root, textvariable=battery_label_var, font=("Segoe UI", 12), bg="#f4f4f5", fg="#0f172a")
 battery_label.pack(pady=(10,0))
 
-
 #bars styling
 style = ttk.Style()
 style.theme_use("clam")
