@@ -3,7 +3,7 @@
 ⚙️ A smart, lightweight background task manager that dynamically manages CPU and RAM priorities based on workload. Built with Python + Tkinter.
 
 > 🔧 Still in early development (Build in Public 🚀)  
-> Follow progress on Twitter/X: [@yourhandle](https://twitter.com/yourhandle)  
+> Follow progress on Twitter/X: [@shizzei](https://twitter.com/shizzei)  
 > Current Status: Day 2 — UI skeleton and basic process listing.
 
 ## 🗺️ Roadmap
