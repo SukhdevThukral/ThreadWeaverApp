@@ -23,6 +23,13 @@ def update_stats():
         ram_progress["value"] = ram
         cpu_label_var.set(f"CPU Usage: {cpu}%")
         ram_label_var.set(f"RAM Usage: {ram}%")
+        battery = psutil.sensors_battery()
+        if battery is not None:
+            battery_perc = battery.percent
+            charging = "Charging" if battery.power_plugged else "Not Charging"
+            battery_label_var.set(f"Battery: {battery_perc}% ({charging})")
+        else:
+            battery_label_var.set("Battery Not Present")
 
 root = tk.Tk()
 root.title("ThreadWeaver - Smart Task Manager")
@@ -56,6 +63,13 @@ ram_label.pack(pady=(10,0))
 
 ram_progress = ttk.Progressbar(root, orient="horizontal", length=400, mode="determinate")
 ram_progress.pack(pady=(5,15))
+
+#battery stats
+battery_label_var = tk.StringVar()
+battery_label_var.set("Battery: ...")
+battery_label = tk.Label(root, textvariable=battery_label_var, font=("Segoe UI", 12), bg="#f4f4f5", fg="#0f172a")
+battery_label.pack(pady=(10,0))
+
 
 #bars styling
 style = ttk.Style()
